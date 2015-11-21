@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class Laev {
     private int[] koordinaadid;
-    private boolean pihtaSaanud = false;
+    private boolean elus = true;
 
     public Laev(int mereServaPikkus) {
         System.out.println("START LAEV");
@@ -21,5 +21,21 @@ public class Laev {
         int y = rand.nextInt(mereServaPikkus);
         koordinaadid = new int[]{x,y};
         System.out.println(Arrays.toString(koordinaadid));
+    }
+
+    public boolean kasOledElus() {
+        return elus;
+    }
+
+    public boolean kasSaidPihta(int[] lask) {
+        if (Arrays.equals(lask, koordinaadid) && elus) {
+            elus = false;
+            return true;
+        }
+        return false;
+    }
+
+    public int[] annaKoordinaadid() {
+        return koordinaadid;
     }
 }

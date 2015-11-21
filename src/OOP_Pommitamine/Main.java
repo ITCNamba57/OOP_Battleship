@@ -16,7 +16,7 @@ public class Main {
 *    Oskab mangu toos hoida
 *    Oskab mangu lopetada
 *Mangija
-*   Oskab kysida laevu koordinate
+*   Oskab kysida laske koordinate
 *   Oskab tagasisidet anda kui lask laks pihta
 *   Oskab tagasisidet anda kui lask laks mooda
 *   Oskab tagasisidet anda kui mand on labi

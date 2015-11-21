@@ -12,9 +12,18 @@ public class Mang {
     public Mang() {
         System.out.println("START MANG");
         Meri meri = new Meri(10);
+        Mangija mangija = new Mangija();
 
         while (meri.kasOnLaevuElus()) {
-            System.out.println("NEXT ROUND");
+            meri.kuvaSeis();
+            int[] lask = mangija.kysiLasuKoordinadid();
+            boolean pihtas = meri.kasKeegiSaiPihta(lask);
+            if (pihtas) {
+                mangija.pihtas();
+            }else{
+                mangija.moodas();
+            }
         }
+        mangija.gameover();
     }
 }
